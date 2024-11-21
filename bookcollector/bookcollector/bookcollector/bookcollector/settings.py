@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-boa(j0jmp#rt^42t*s0_n9(#jwsbvnqn#2v&6mo81dw!*@r&!j'
+SECRET_KEY = 'django-insecure-su@xhnk6uf3=*)-om*=j1_m7b1iqyt*j=@=6we$^yg7&8+k0vl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'my_app',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +76,7 @@ WSGI_APPLICATION = 'bookcollector.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mycoolapp',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
