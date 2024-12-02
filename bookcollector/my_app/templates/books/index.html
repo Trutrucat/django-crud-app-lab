@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Book List</h1>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Summary</th>
+    </tr>
+    {% for book in book_list %}
+      <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.summary }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  <a class="nav-link" href="{% url 'book_create' %}">Create a new book</a>
+
+{% endblock %}
